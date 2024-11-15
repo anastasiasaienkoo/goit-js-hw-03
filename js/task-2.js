@@ -1,9 +1,9 @@
 function makeArray(firstArray, secondArray, maxLength) {
-const massiv = firstArray.concat(secondArray);
-if (massiv.length > maxLength) {
-    return massiv.slice(massiv,maxLength);
+const combinedArray = firstArray.concat(secondArray);
+if (combinedArray.length > maxLength && Array.isArray(combinedArray)) {
+    return combinedArray.slice(0,maxLength);
 } else {
-    return massiv;
+    return combinedArray;
 }
 }
 
